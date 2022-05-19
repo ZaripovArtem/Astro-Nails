@@ -1,0 +1,31 @@
+﻿@model Order
+
+@using (Html.BeginForm())
+{
+    <form asp-action="Index" asp-controller="Order" asp-anti-forgery="true">
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <p>@User.Identity.Name</p>
+        }
+        else
+        {
+            <label asp-for="ClientPhone"> Введите номер телефона </label>
+            <input type="text" asp-for="ClientPhone" />
+            <label asp-for="Name"> Введите имя </label>
+            <input type="text" asp-for="Name" />
+            <label asp-for="Surname"> Введите фамилию </label>
+            <input type="text" asp-for="Surname" />
+            <label asp-for="Patronomic"> Введите отчество </label>
+            <input type="text" asp-for="Patronomic" />
+        }
+        <select asp-for="UserId" asp-items="ViewBag.Users"></select>
+        <select asp-for="ServiceId" asp-items="ViewBag.Services"></select>
+        <input class="form-control" asp-for="DateTime_Order" asp-format="{0:yyyy-MM-ddTHH:mm}" />
+        <span asp-validation-for="DateTime_Order"></span>
+        <input type="submit" class="submit-buttom" value="Добавить" />
+        @Html.ActionLink("Отменить", "Index")
+    </form>
+}
+
+

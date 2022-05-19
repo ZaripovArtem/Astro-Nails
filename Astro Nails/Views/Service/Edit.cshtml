@@ -1,0 +1,8 @@
+﻿@model Astro_Nails.Models.Service
+
+@using (Html.BeginForm())
+{
+    @Html.TextBoxFor(m => m.Name, new { @class = "form-main", @placeholder = "Название услуги" })
+    <input type="submit" class="submit-buttom" value="Изменить" />
+    @Html.ActionLink("Отменить", "Index")
+}

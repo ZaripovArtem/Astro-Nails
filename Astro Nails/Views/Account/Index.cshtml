@@ -1,0 +1,13 @@
+﻿@foreach (var p in Model)
+{
+    @p.Name
+    <br />
+    @p.Surname
+    <br />
+    @p.Patronomic
+    <br />
+    @p.Phone
+    <td class="redbutton">@Html.ActionLink("Редактировать", "Edit", new { id = p.Id })</td>
+    <td class="redbutton">@Html.ActionLink("Заказы", "Entry")</td>
+    <br />
+}

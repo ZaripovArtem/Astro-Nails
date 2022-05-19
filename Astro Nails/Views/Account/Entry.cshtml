@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Astro_Nails.Models.Order>
+
+@using (Html.BeginForm())
+{
+    @foreach (var p in Model)
+    {
+        @Html.DisplayFor(m => p.User.Name)
+        <h3>Время оформления заявки</h3>
+        @Html.DisplayFor(m => p.DateTime_Now)
+        <h3>Время записи</h3>
+        @Html.DisplayFor(m => p.DateTime_Order)
+        @Html.DisplayFor(m => p.Service_State)
+        <input type="submit" value="Удалить заявку" />
+    }
+}
+

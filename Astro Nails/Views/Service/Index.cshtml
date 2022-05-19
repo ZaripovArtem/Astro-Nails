@@ -1,0 +1,22 @@
+﻿@using (Html.BeginForm())
+{
+    <table>
+            @Html.ActionLink("Добавить услугу", "Create")
+            <tr>
+                <th>Id</th>
+                <th>Название услуги</th>
+                <th></th>
+            </tr>
+
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.Id</td>
+                    <td>@p.Name</td>
+                    <td>@Html.ActionLink("Редактировать", "Edit", new { id = p.Id })</td>
+                    <td>@Html.ActionLink("Удалить", "Delete", new { id = p.Id })</td>
+                </tr>
+            }
+          
+    </table>
+}

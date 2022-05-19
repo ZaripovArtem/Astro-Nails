@@ -1,0 +1,20 @@
+﻿@model Astro_Nails.Models.User
+
+@using (Html.BeginForm())
+{
+    @Html.TextBoxFor(m => m.Name, new { @class = "form-main", @placeholder = "Имя" })
+<br />
+    @Html.TextBoxFor(m => m.Surname, new { @class = "form-main", @placeholder = "Фамилия" })
+<br />
+    @Html.TextBoxFor(m => m.Patronomic, new { @class = "form-main", @placeholder = "Отчество" })
+<br />
+    @Html.TextBoxFor(m => m.Phone, new { @class = "form-main", @placeholder = "Номер телефона" })
+    @Html.ValidationMessageFor(m => m.Phone)
+<br />
+    @Html.TextBoxFor(m => m.Password, new { @class = "form-main", @placeholder = "Пароль" })
+<br />
+    @Html.DropDownListFor(m => m.RoleId, ViewBag.Roles as SelectList)
+<input type="submit" class="submit-buttom" value="Изменить" />
+    @Html.ActionLink("Отменить", "Index")
+}
+

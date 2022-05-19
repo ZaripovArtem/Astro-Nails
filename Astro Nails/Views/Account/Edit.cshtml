@@ -1,0 +1,8 @@
+﻿@model Astro_Nails.Models.User
+
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <input type="submit" value="Изменить" />
+    @Html.ActionLink("Отменить", "Index")
+}
