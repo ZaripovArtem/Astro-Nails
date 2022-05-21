@@ -1,7 +1,15 @@
 ﻿@model Astro_Nails.Models.User
 
 @using (Html.BeginForm())
-{
+{<div class="qq">
+ 
+
+      <div class="main">
+           <div class="welcome">
+      <h2 class="welcometxt">Редактирование пользователя</h2>
+
+      </div>
+       <div class="main1">
     @Html.TextBoxFor(m => m.Name, new { @class = "form-main", @placeholder = "Имя" })
     <br />
     @Html.TextBoxFor(m => m.Surname, new { @class = "form-main", @placeholder = "Фамилия" })
@@ -13,8 +21,80 @@
     <br />
     @Html.TextBoxFor(m => m.Password, new { @class = "form-main", @placeholder = "Пароль" })
     <br />
-    @Html.DropDownListFor(m => m.RoleId, ViewBag.Roles as SelectList)
+    @Html.DropDownListFor(m => m.RoleId, ViewBag.Roles as SelectList, new { @class = "spisk"})
+      <div class="buttons">
     <input type="submit" class="submit-buttom" value="Изменить" />
     @Html.ActionLink("Отменить", "Index")
+         </div>
+    </div>
+    </div>
+    </div>
+
 }
+<style>
+    .spisk
+    {
+        width:350px;
+        height:50px;
+        border-radius:8px;
+        margin:10px;
+
+    }
+   
+
+    .buttons
+    {
+        margin-left:20px;
+    }
+    .btn
+    {
+        background-color:white;
+        color:black;
+        
+    }
+    .btn:hover
+    {
+          background-color:purple;
+        color:white;
+        transition:0.8s;
+    }
+    .btn:not(hover)
+    {
+                transition:0.8s;
+    }
+    .qq
+    {
+        width:100%;
+        height:100%;
+    }
+    .welcome
+    {
+        margin-top:80px;
+         width:800px;
+         margin-bottom:100px;
+    }
+    .main1
+    {
+        padding:50px;
+      
+        
+    }
+    .main
+    {
+        position:absolute;
+        left:35%;
+        width:300px;
+        height:700px;
+       
+
+    }
+    .form-main
+    {
+        width:350px;
+        height:50px;
+        border-radius:8px;
+        margin:10px;
+    }
+</style>
+
 

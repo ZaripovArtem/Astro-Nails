@@ -1,42 +1,95 @@
 ﻿@model Astro_Nails.Models.RegisterViewModel
-
-<h2>Регистрация</h2>
-
+<div class="logotxt">
+<h2 class="lgtxt">Регистрация</h2>
+</div>
 <form asp-action="Register" asp-controller="Account" asp-anti-forgery="true">
     <div class="validation" asp-validation-summary="ModelOnly"></div>
-    <div>
+    <div class="main">
         <div>
-            <label asp-for="Phone">Введите номер телефона</label><br />
-            <input type="text" asp-for="Phone" />
+            
+            <input type="text" asp-for="Phone" class="input" placeholder="Номер телефона"/>
             <span asp-validation-for="Phone" />
         </div>
         <div>
-            <label asp-for="Name">Введите Ваше имя</label><br />
-            <input type="text" asp-for="Name" />
+            <input type="text" asp-for="Name" class="input" placeholder="Имя" />
             <span asp-validation-for="Name" />
         </div>
         <div>
-            <label asp-for="Surname">Введите Вашу фамилию</label><br />
-            <input type="text" asp-for="Surname" />
+            <input type="text" asp-for="Surname"  class="input" placeholder="Фамилия"/>
             <span asp-validation-for="Surname" />
         </div>
         <div>
-            <label asp-for="Patronomic">Введите Ваше отчество</label><br />
-            <input type="text" asp-for="Patronomic" />
+            <input type="text" asp-for="Patronomic"  class="input" placeholder="Отчество"/>
             <span asp-validation-for="Patronomic" />
         </div>
         <div>
-            <label asp-for="Password">Введите пароль</label><br />
-            <input asp-for="Password" />
+            <input asp-for="Password"  class="input" placeholder="Пароль"/>
             <span asp-validation-for="Password" />
         </div>
         <div>
-            <label asp-for="ConfirmPassword">Повторите пароль</label><br />
-            <input asp-for="ConfirmPassword" />
+            <input asp-for="ConfirmPassword"  class="input" placeholder="Подтвердите пароль"/>
             <span asp-validation-for="ConfirmPassword" />
         </div>
-        <div>
-            <input type="submit" value="Регистрация" />
+        <div class="buttons">
+            <input type="submit" value="Регистрация" class="btn" />
         </div>
     </div>
 </form>
+<style>
+     .lgtxt
+    { font-size:60px;
+
+    }
+    .logotxt
+    {
+        position:absolute;
+        left:40%;
+        top:10%;
+        margin-right:200px;
+       
+    }
+    .main
+    {
+        position:absolute;
+        left:41%;
+     
+        top:25%;
+    }
+
+.input
+{
+    margin:12px;
+    width:300px;
+    height:50px;
+    border-radius:8px;
+}
+.buttons
+{
+    margin-top:12px;
+     margin-left:10px;
+   
+   
+
+}
+.btn
+{
+    color:black;
+    background-color:white;
+    border:1px solid black;
+    width:250px;
+}
+.btn:hover
+{
+    color:white;
+    background-color:purple;
+    transition:0.8s;
+ 
+       width:300px;
+    border-radius:12px;
+}
+.btn:not(hover)
+{
+    
+    transition:0.8s;
+}
+</style>

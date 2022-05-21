@@ -4,13 +4,475 @@
 {
     @foreach (var p in Model)
     {
-        @Html.DisplayFor(m => p.User.Name)
-        <h3>Время оформления заявки</h3>
-        @Html.DisplayFor(m => p.DateTime_Now)
-        <h3>Время записи</h3>
-        @Html.DisplayFor(m => p.DateTime_Order)
-        @Html.DisplayFor(m => p.Service_State)
-        <input type="submit" value="Удалить заявку" />
+       
+      
+       
+     
+
+        <div class="welcome">
+            <h2 class="welcome1">Ваши заказы </h2>
+          
+
+            </div>
+<div class="main">
+    <div class="main1">
+
+    <div class="list">
+        <div class="listq">
+            <div class="listq1">
+
+                   <h4 class="voform">Время оформления заявки </h4>
+                <div class="date">
+                    <h2 class="datetim1">  @Html.DisplayFor(m => p.DateTime_Now)  </h2>
+
+                </div>
+
+
+            </div>
+
+               <div class="listmaster">
+
+                   <h4 class="voformmas">Ваш мастер: @Html.DisplayFor(m => p.User.Name) </h4>
+               
+
+
+            </div>
+            
+
+            <div class="listq2">
+                
+                   <h4 class="voform2">Время записи </h4>
+                <div class="date2">
+                    <h2 class="datetim2">  @Html.DisplayFor(m => p.DateTime_Order)  </h2>
+             
+            </div>
+
+
+        </div>
+    
+         <input type="submit" value="Удалить заявку" class="btn"/>
+         
+    </div>
+    <h2 class="status">  
+        @Html.DisplayFor(m => p.Service_State) </h2>
+        
+       
+    </div> </div> 
+   
+
+
+</div>
     }
 }
 
+
+
+<style>
+    .name
+    {
+       width: 159px;
+height: 59px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 48px;
+line-height: 59px;
+/* identical to box height */
+
+text-align: center;
+
+color: #491552;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+    }
+    .welcome1
+    {
+        width: 257px;
+height: 44px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+    .welcome
+    {
+        display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 27px;
+
+position: absolute;
+width: 443px;
+height: 59px;
+left: 158px;
+top: 65px;
+
+    }
+   
+    .btn
+    {
+        position:absolute;
+        top:320px;
+       width: 194px;
+height: 40px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #E80A3F;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+    .status
+    {
+        width: 153px;
+height: 29px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #1B7329;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+    }
+    .datetim2
+    {
+        width: 300px;
+height: 29px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+    .date2
+    {
+        display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 67px;
+
+width: 285px;
+height: 29px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+    }
+    .datetim2
+    {
+        display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 67px;
+
+width: 285px;
+height: 29px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+    }
+    .voform2
+    {
+        width: 285px;
+height: 29px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+    }
+    .datetim1
+    {
+        width: 258px;
+height: 29px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+    .date
+    {
+        display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 46px;
+
+width: 258px;
+height: 29px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+    }
+    .voform
+    {
+      width: 348px;
+height: 29px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+    .listq2
+    {
+   display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+width: 285px;
+height: 82px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+    }
+    .listq1
+    {
+        position:absolute;
+        top:152px;
+        right:316px;
+      display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 348px;
+height: 82px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+    .listmaster
+    {
+        
+        position:absolute;
+        top:275px;
+        right:465px;
+      display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 348px;
+height: 82px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+    .voformmas
+    {
+         width: 550px;
+height: 29px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+    .listq
+    {
+       display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 348px;
+height: 188px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+
+    .list
+    {
+        display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 96px;
+
+width: 597px;
+height: 188px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+    .main1
+    {
+        display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 113px;
+
+width: 597px;
+height: 330px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+    .main
+    {
+        box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 32px 27px;
+gap: 10px;
+
+position: relative;
+width: 651px;
+height: 394px;
+left: 149px;
+top: 159px;
+
+border: 1px solid #000000;
+border-radius: 12px;
+margin:30px;
+
+    }
+
+
+</style>

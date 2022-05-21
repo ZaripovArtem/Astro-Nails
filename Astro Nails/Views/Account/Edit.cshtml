@@ -2,7 +2,79 @@
 
 @using (Html.BeginForm())
 {
-    @Html.EditorForModel()
-    <input type="submit" value="Изменить" />
+    <div class="qq">
+ 
+
+      <div class="main">
+           <div class="welcome">
+      <h2 class="welcometxt">Редактирование персональных данных</h2>
+
+      </div>
+       <div class="main1">
+     @Html.TextBoxFor(m => m.Name, new { @class = "form-main", @placeholder = "Имя" })
+       @Html.TextBoxFor(m => m.Surname, new { @class = "form-main", @placeholder = "Фамилия" })
+
+    @Html.TextBoxFor(m => m.Patronomic, new { @class = "form-main", @placeholder = "Отчество" })
+    <div class="buttons">
+    <input type="submit" value="Изменить" class="btn" />
     @Html.ActionLink("Отменить", "Index")
+        </div>
+    </div>
+    </div>
+    </div>
 }
+<style>
+    .buttons
+    {
+        margin-left:20px;
+    }
+    .btn
+    {
+        background-color:white;
+        color:black;
+        
+    }
+    .btn:hover
+    {
+          background-color:purple;
+        color:white;
+        transition:0.8s;
+    }
+    .btn:not(hover)
+    {
+                transition:0.8s;
+    }
+    .qq
+    {
+        width:100%;
+        height:100%;
+    }
+    .welcome
+    {
+        margin-top:80px;
+         width:800px;
+         margin-bottom:100px;
+    }
+    .main1
+    {
+        padding:50px;
+      
+        
+    }
+    .main
+    {
+        position:absolute;
+        left:35%;
+        width:300px;
+        height:700px;
+       
+
+    }
+    .form-main
+    {
+        width:350px;
+        height:50px;
+        border-radius:8px;
+        margin:10px;
+    }
+</style>

@@ -4,28 +4,921 @@
 {
     <form asp-action="Index" asp-controller="Order" asp-anti-forgery="true">
 
-        @if (User.Identity.IsAuthenticated)
-        {
-            <p>@User.Identity.Name</p>
-        }
-        else
-        {
-            <label asp-for="ClientPhone"> Введите номер телефона </label>
-            <input type="text" asp-for="ClientPhone" />
-            <label asp-for="Name"> Введите имя </label>
-            <input type="text" asp-for="Name" />
-            <label asp-for="Surname"> Введите фамилию </label>
-            <input type="text" asp-for="Surname" />
-            <label asp-for="Patronomic"> Введите отчество </label>
-            <input type="text" asp-for="Patronomic" />
-        }
-        <select asp-for="UserId" asp-items="ViewBag.Users"></select>
-        <select asp-for="ServiceId" asp-items="ViewBag.Services"></select>
-        <input class="form-control" asp-for="DateTime_Order" asp-format="{0:yyyy-MM-ddTHH:mm}" />
-        <span asp-validation-for="DateTime_Order"></span>
-        <input type="submit" class="submit-buttom" value="Добавить" />
+    
+ 
+      
+     <div class="text">
+
+        <div class="onetextt">
+        <h1 class="onetext">Маникюрная студия
+        </h1>
+    </div>
+
+    <div class="twotext">
+        <h1 class="twotextt">AstroNails</h1>
+
+     </div>
+ </div>
+ <div class="img">
+
+
+ </div>
+   <div class="mashka">
+
+
+                </div>
+
+                <div class="dashka">
+
+
+                </div>
+
+<div class="qwe"> <h1 class="qwee">Запись </h1> </div>
+
+
+
+    <div class="mm">
+        <div class="main">
+            <div class="list"> 
+                <div class="mainlist">
+
+                    <div class="elm1">
+                        <h1 class="elm1txt">Фамилия </h1>
+                         <input type="text" asp-for="Surname" class="elm1input"/> 
+                    </div>
+
+                      <div class="elm2">
+                        <h1 class="elm2txt">Имя </h1>
+                       <input type="text" asp-for="Name" class="elm2input"/> 
+                    </div>
+
+                      <div class="elm3">
+                        <h1 class="elm3txt">Отчество </h1>
+                         <input type="text" asp-for="Patronomic" class="elm3input"/>
+                    </div>
+
+
+                </div>
+
+             
+            </div>
+            <div class="maintwo">
+
+                <div class="melm1">
+
+                    <div class="mmelm1">
+
+                        <div class="mmmelm1">
+
+                        <div class="element1">
+                            <h1 class="element1txt">Дата     </h1>
+                            <input class="form-control" asp-for="DateTime_Order" asp-format="{0:yyyy-MM-ddTHH:mm}" class="element1input"/>
+                             <span asp-validation-for="DateTime_Order"></span>
+
+                        </div>
+
+                        <div class="element2"> 
+                            <h1 class="element2txt"> Номер телефона </h1>
+                             <input type="text" asp-for="ClientPhone" class="element2input"/>
+                        </div>
+                    </div>
+
+                     <div class="melm2">
+                    <div class="spec">
+
+                        <h1 class="spectxt"> Специалист</h1>
+                           <select asp-for="UserId" asp-items="ViewBag.Users" class="specinput"></select> 
+                    </div>
+                    
+                       <div class="spec2">
+
+                        <h1 class="spec2txt"> Услуга</h1>
+                           <select asp-for="ServiceId" asp-items="ViewBag.Services" class="spec2input"></select> 
+                    </div> 
+                       </div> </div> </div> </div> </div> </div> 
+                       
+                       <div class="buttons">
+
+                            <input type="submit" class="submit-buttom" value="Добавить" />
         @Html.ActionLink("Отменить", "Index")
-    </form>
+                       </div> 
+                        
+      
+         </form>
+
+}
+
+   <style>
+       .dashka
+       {
+           position: absolute;
+width: 1328.27px;
+height: 1136.14px;
+top: 1250.43px;
+right: 1000px;
+background: #94409B;
+border-radius: 519px;
+transform: rotate(155.82deg)
+       }
+       .mashka
+       {
+           position: absolute;
+width: 734.25px;
+height: 1114.03px;
+left: 1325.01px;
+top: 1240px;
+
+background: #AA8FCD;
+border-radius: 210px;
+transform: rotate(20.2deg);
+       }
+  .buttons
+  {
+      position:absolute;
+      top:2000px;
+      left:50%;
+      margin-right: 150px;
+  }
+
+.text
+{
+	display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 0px;
+gap: 17px;
+
+position: absolute;
+width: 385px;
+height: 139px;
+left: 131px;
+top: 191px;
+}
+.qwe
+{
+	position: absolute;
+width: 134px;
+height: 44px;
+left: 848px;
+top: 970px;
+}
+.qwee
+{
+	position: absolute;
+width: 134px;
+height: 44px;
+left: 0px;
+top: 0px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+
+
+color: #000000;
+}
+
+.onetext
+{
+	width: 385px;
+height: 44px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.onetextt
+{
+	display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+width: 385px;
+height: 44px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.twotext
+{
+	display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+width: 324px;
+height: 78px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.twotextt
+{
+	width: 324px;
+height: 78px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 78px;
+/* identical to box height */
+
+
+color: #4F2387;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.img
+{
+position: absolute;
+width: 400px;
+height: 450px;
+left: 919px;
+top: 158px;
+
+background: url(https://sun9-20.userapi.com/s/v1/ig2/6Nh4qdVYwvj9MdoPW9IDmMqu0gZAqKkKp_PHwpgPqKsCle3CJnTwaO-r0hpzViheTkEytuF99s4e3Zzo_lRloz6d.jpg?size=408x450&quality=96&type=album);
+
+}
+
+.mm
+{
+	box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 120px 146px;
+gap: 104px;
+
+position: absolute;
+width: 1477px;
+height: 954px;
+left: 220px;
+top: 1098px;
+
+background: #FFFFFF;
+border: 1px solid #000000;
+border-radius: 21px;
+}
+.main
+{
+	display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 104px;
+
+width: 500px;
+height: 714px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.list
+{
+	display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+width: 1126px;
+height: 127px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.mainlist
+{
+	display: flex;
+flex-direction: row;
+align-items: flex-end;
+padding: 0px;
+gap: 50 px;
+
+width: 1126px;
+height: 127px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.elm1
+{
+	display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 15px;
+
+width: 290px;
+height: 121px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.elm1txt
+{
+
+width: 119px;
+height: 29px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.elm1input
+{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+gap: 10px;
+
+width: 150px;
+height: 45px;
+
+/* Gray 6 */
+
+
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.elm2
+{
+	display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 21px;
+
+width: 290px;
+height: 127px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.elm2txt
+{
+	width: 54px;
+height: 29px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.elm2input
+{
+	display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+gap: 10px;
+
+width: 150px;
+height: 45px;
+/* Gray 6 */
+
+
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.elm3
+{
+	display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 21px;
+
+width: 290px;
+height: 127px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+}
+.elm3txt
+{
+	width: 118px;
+height: 29px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.elm3input
+{
+	display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+gap: 10px;
+
+
+width: 150px;
+height: 45px;
+
+/* Gray 6 */
+
+
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.maintwo
+{
+	display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 87px;
+
+width: 1185px;
+height: 483px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.melm1
+{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+width: 762px;
+height: 124px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.mmelm1
+{
+	display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 69px;
+
+width: 762px;
+height: 124px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.element1
+{
+    position:absolute;
+    right:950px;
+    top:550px;
+	display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 18px;
+
+width: 400px;
+height: 124px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.element1txt
+{
+	width: 93px;
+height: 29px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.element1input
+{
+	display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+gap: 10px;
+
+width: 200px;
+height: 50px;
+
+/* Gray 6 */
+
+
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+.element2
+{
+     position:absolute;
+    right:440px;
+	display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 18px;
+
+width: 344px;
+height: 124px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.element2txt
+{
+	width: 184px;
+height: 29px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.element2input
+{
+	display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+gap: 10px;
+
+width: 250px;
+height: 50px;
+
+/* Gray 6 */
+
+
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+}
+.melm2
+{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+width: 1185px;
+height: 128px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.mmmelm1
+{
+	display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 69px;
+
+width: 762px;
+height: 124px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.spec
+{
+	position: absolute;
+	top: 350px;
+	right: 655px;
+	display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 22px;
+
+width: 600px;
+height: 128px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.spectxt
+{
+	width: 154px;
+height: 29px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.specinput
+{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+gap: 10px;
+
+width: 150px;
+height: 45px;
+
+/* Gray 6 */
+
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
 }
 
 
+.spec2
+{
+	position: absolute;
+	top: 350px;
+	right: 950px;
+	display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 22px;
+
+width: 600px;
+height: 128px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.spec2txt
+{
+	width: 154px;
+height: 29px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.spec2input
+{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+gap: 10px;
+
+width: 150px;
+height: 45px;
+
+/* Gray 6 */
+
+
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.button
+{
+	position: absolute;
+	top: 800px;
+	left: 300px;
+	box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 24px 92px;
+gap: 10px;
+
+width: 900px;
+height: 77px;
+
+border: 1px solid #000000;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 12px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+   </style>

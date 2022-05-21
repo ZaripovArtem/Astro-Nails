@@ -18,6 +18,7 @@ namespace Astro_Nails.Models
         public string ClientPhone { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
+      
         public string Patronomic { get; set; }
         public Service Service { get; set; }
         public User User { get; set; }

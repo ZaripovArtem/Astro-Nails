@@ -2,18 +2,1003 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-@using (Html.BeginForm())
-{
-    @Html.DropDownListFor(m => m.UserId, ViewBag.Users as IEnumerable<SelectListItem>)
-}
 
-@if (User.Identity.IsAuthenticated)
-{
-    <p>@User.Identity.Name</p>
-}
+        <div class="mainlist">
+<div class="textone">
+    <a class="contactbutton"> Контакты</a>
 
-<div class="text-center">
+    <a class="uslugibutton"> Услуги </a>
 
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <a class="onasbutton"> О нас </a>
 </div>
+
+        </div>
+     
+
+     <div class="authoriz">
+<a href="" class="authorizbutton">  Авторизоваться </a>
+     </div>
+
+
+<div class="maintext">
+ <h1 class="maintexttxt"> Создай свой идеальный образ</h1> </div>
+
+<div class="secondorytext"> <h1 class="secondorytextt"> Подчеркни свой стиль </h1> </div>
+
+<div class="secondarytwotext"><h1 class="secondarytwotextt">Будь ярче</h1></div>
+
+
+<div class="buttonzapis">
+    <a href="" class="zapisbuttonmain "> Записаться</a>
+</div>
+
+<div class="devka">  </div>
+
+
+    
+
+
+   
+
+   <div class="back2"> </div>
+@*
+   <div class="hands1  ">   <img src="https://disk.yandex.ru/client/disk?idApp=client&dialog=slider&idDialog=%2Fdisk%2Fhands2.svg">  </div>
+
+<div class="hands2">  <img src="https://disk.yandex.ru/client/disk?idApp=client&dialog=slider&idDialog=%2Fdisk%2Fhands2.svg"></div>
+*@
+
+
+
+  <div class="lines"> </div>
+    <div class="lines2"> </div>
+<div class="main2">
+    
+<div class="textmain2">
+
+    
+
+    <h1 class="texttext">
+Создаем ногти, которые подчеркнут вашу красоту
+    </h1>
+</div>
+
+<div class="texttwomain">
+<h1 class="textmaintwo"> 
+Бережно уберём всё лишнее, подберем идеальный цвет и добавим яркий дизайн. Все, что вы сможете себе представить — можно!</h1>
+
+ </div>
+
+
+
+
+<div class="back3">
+<div class="nogti">
+    </div>
+
+</div>
+<div class="tyanka"> </div>
+</div>  
+
+<div class="main3text">
+<h1 class="mainn3text">Современные
+техники дизайна:
+градиент, фольга,
+наклейки, втирка,
+стразы, стэмпинг</h1>
+</div>
+<div class="main3text2">
+    
+    <h1 class="main3textt">Гарантия на маникюр
+и педикюр — семь дней,
+на остальные услуги —
+три дня</h1>
+</div>
+
+
+
+<div class="shape">
+    <h1 class="zzz">Маникюр
+    </h1>
+    <h1 class="zzzz"> Приведем в порядок ваши пальчики. Делаем аппаратный и новый пилочный маникюр.</h1>
+<h1 class="xx">От 1200 руб.</h1>
+<div class="buttonmain1"> <a href="" class="button1">Записаться</a></div>
+
+
+</div>
+
+
+<div class="shape2">
+
+    <h1 class="ww"> Маникюр с покрытием лак или гель-лак</h1>
+    <h1 class="www">Подберем идеальный цвет под настроение и стиль</h1>
+    <h1 class="xxx">От 1200 руб.</h1>
+    <div class="buttonmain2"> <a href="" class="button2">Записаться</a></div>
+
+    </div>
+
+<div class="shape3">
+    <h1 class="ee">Маникюр с уходом для рук</h1>
+    <h1 class="rr">Забота о здоровье ногтей и кожи рук</h1>
+      <h1 class="xxxx">От 1200 руб.</h1>
+    <div class="buttonmain3"> <a href="" class="button3">Записаться</a></div>
+
+
+
+ </div>
+ <style>
+ .mainlist
+{
+	position: absolute;
+width: 430px;
+height: 49px;
+left: 131px;
+top: 37px;
+}
+.contactbutton
+{
+	display: flex;
+flex-direction: row;
+align-items: flex-start;
+
+gap: 10px;
+
+position: absolute;
+width: 104px;
+height: 30px;
+padding:6px;
+left: 0px;
+top: 0px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+color: #000000;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.contactbutton:hover
+{
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+background-color: #E9E7D7;
+transition: 0.8s;
+}
+.contactbutton:not(hover)
+{
+	
+
+transition: 0.8s;
+}
+
+.uslugibutton:hover
+{
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+background-color: #E9E7D7;
+transition: 0.8s;
+}
+.uslugibutton:not(hover)
+{
+	
+
+transition: 0.8s;
+}
+
+.onasbutton:hover
+{
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+background-color: #E9E7D7;
+transition: 0.8s;
+}
+.onasbutton:not(hover)
+{
+	
+
+transition: 0.8s;
+}
+
+
+
+.uslugibutton
+{
+	display: flex;
+flex-direction: row;
+align-items: flex-start;
+
+gap: 10px;
+
+position: absolute;
+width: 76px;
+height: 30px;
+padding:6px;
+left: 187px;
+top: 1px;
+
+
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.onasbutton
+{
+	display: flex;
+flex-direction: row;
+align-items: flex-start;
+
+gap: 10px;
+
+position: absolute;
+width: 70px;
+height: 30px;
+padding:6px;
+left: 346px;
+top: 1px;
+
+/* Gray 6 */
+
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.authoriz
+{
+	position: absolute;
+width: 204px;
+height: 29px;
+left: 1580px;
+top: 44px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+}
+
+.authorizbutton
+{
+	text-decoration: none;
+
+}
+.authorizbutton:hover
+{
+	padding: 20px;
+	border: 1px solid black;
+	border-radius: 1px solid black;
+	transition: 0.5s;
+}
+.authorizbutton:not(hover)
+{
+	
+	transition: 0.5s;
+}
+
+.maintext
+{
+	position: absolute;
+width: 506px;
+height: 88px;
+left: 131px;
+top: 191px;
+
+}
+.maintexttxt
+{
+position: absolute;
+width: 406px;
+height: 88px;
+left: 0px;
+top: 0px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 44px;
+
+color: #000000;
+}
+.secondorytext
+{
+	position: absolute;
+width: 286px;
+height: 58px;
+left: 131px;
+top: 290px;
+}
+.secondorytextt
+{
+	position: absolute;
+width: 286px;
+height: 58px;
+left: 0px;
+top: 0px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+}
+.secondarytwotext
+{
+position: absolute;
+width: 126px;
+height: 29px;
+left: 131px;
+top: 319px
+}
+
+.secondarytwotextt
+{
+	position: absolute;
+width: 126px;
+height: 29px;
+left: 0px;
+top: 0px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+}
+
+.buttonzapis
+{
+	display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 24px 92px;
+gap: 10px;
+
+position: absolute;
+width: 128px;
+height: 27px;
+left: 131px;
+top: 380px;
+
+/* Gray 6 */
+
+background: #F2F2F2;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+}
+
+.zapisbuttonmain
+{
+	width: 144px;
+height: 29px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+text-decoration: none;
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.devka
+{
+	position: absolute;
+width: 475px;
+height: 642px;
+left: 926px;
+top: 157px;
+
+  background: url('https://sun1.tattelecom-nbc.userapi.com/s/v1/ig2/lygiCAWHZdllrFf3EazOME-zrXy3A9lkTDDhG0m3W0ojQKlEbhPuJCYitCgNjmN5sMgtetRfdufPobfynZydzxcg.jpg?size=796x1076&quality=96&type=album') no-repeat center center;
+  background-size: cover;
+}
+.hands1
+{
+	position: absolute;
+width: 427px;
+height: 314px;
+left: 324px;
+top: 887px;
+}
+.hands2
+{
+	position: absolute;
+width: 427px;
+height: 314px;
+left: 1065px;
+top: 873px;
+
+}
+.back2
+{
+position: absolute;
+width: 1920px;
+height: 777px;
+left: 0px;
+top: 1000px;
+
+
+background: url(https://i.imgur.com/CnnvdFY.jpeg);
+}
+
+.textmain2
+{
+	position: absolute;
+width: 731px;
+height: 88px;
+left: 171px;
+top: 1363px;
+
+}
+
+.texttext
+{
+	position: absolute;
+width: 731px;
+height: 88px;
+left: 0px;
+top: 0px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 44px;
+
+color: #FFFFFF;
+}
+.texttwomain
+{
+
+position: absolute;
+width: 619px;
+height: 87px;
+left: 166px;
+top: 1476px;
+}
+
+.textmaintwo
+{
+	position: absolute;
+width: 469px;
+height: 87px;
+left: 0px;
+top: 0px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+
+color: #FFFFFF;
+}
+
+.lines
+{
+	
+position: absolute;
+width: 154.43px;
+height: 162.49px;
+left: 56px;
+top: 1257px;
+background-color: white;
+transform: rotate(30deg);
+background: url(https://3.downloader.disk.yandex.ru/preview/77eabbc8b5d01d07ff6a0a813302993079ae13b87659f30724e28577624bb145/inf/CeTN0HPqFdNSwYiTfnoospmYWHQxbojC5CXB3V3HcpXHprv5nQD8F2gqgnS_C3OIbVHrCgFG1yiuITN0fITeUQ%3D%3D?uid=1409026565&filename=lineswhite.svg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1409026565&tknv=v2&size=1920x880);
+}
+.lines2
+{
+	position: absolute;
+width: 105px;
+height: 127px;
+left: 881.49px;
+top: 1284.5px;
+
+transform: rotate(120deg);
+background: url(https://3.downloader.disk.yandex.ru/preview/77eabbc8b5d01d07ff6a0a813302993079ae13b87659f30724e28577624bb145/inf/CeTN0HPqFdNSwYiTfnoospmYWHQxbojC5CXB3V3HcpXHprv5nQD8F2gqgnS_C3OIbVHrCgFG1yiuITN0fITeUQ%3D%3D?uid=1409026565&filename=lineswhite.svg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1409026565&tknv=v2&size=1920x880);
+}
+.tyanka
+{
+position: absolute;
+width: 560px;
+height: 702px;
+left: 1135px;
+top: 1338px;
+
+background: url(https://cdn.discordapp.com/attachments/951913710035816468/976966813235679342/devka.png)	
+}
+
+.back3
+{
+	position: absolute;
+width: 1920px;
+height: 2731px;
+left: -28px;
+top: 1923px;
+
+background: url(https://i.imgur.com/fRRGg1p.jpeg) no-repeat;
+}
+.main3text
+{
+	position: absolute;
+width: 387px;
+height: 236px;
+left: 681px;
+top: 1971px;
+}
+.mainn3text
+{
+	position: absolute;
+width: 387px;
+height: 236px;
+left: 0px;
+top: 0px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 44px;
+
+color: #FFFFFF;
+
+}
+
+.main3text2
+{
+	position: absolute;
+width: 480px;
+height: 188px;
+left: 681px;
+top: 2252px;
+}
+.main3textt
+{
+	position: absolute;
+width: 480px;
+height: 188px;
+left: 0px;
+top: 0px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 44px;
+
+color: #FFFFFF;
+}
+
+.nogti
+{
+	position: absolute;
+width: 450px;
+height: 541px;
+left: 121px;
+top: 152px;
+
+background: url(https://cdn.discordapp.com/attachments/951913710035816468/976967167197196328/photo7.png);
+}
+
+.shape
+{
+position: absolute;
+width: 422px;
+height: 479.6px;
+left: 186px;
+top: 2786px;
+background: url(https://3.downloader.disk.yandex.ru/preview/0bbc0aaeaeac877e59b38b58ecc0d0218e967c1e5d89babc010df3eff615e540/inf/JDa_Z-tAHyZi5p7KxNdvxeKLbtQuELGpcDsq-qsR7Sc94lUfiCwcSwj_qyacx8G52fdxeY5-f2GDB-EZ90sBzA%3D%3D?uid=1409026565&filename=shape1.svg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1409026565&tknv=v2&size=1920x880);
+}
+.shape2
+{
+	position: absolute;
+width: 422px;
+height: 479.6px;
+left: 752px;
+top: 2791px;
+background: url(https://3.downloader.disk.yandex.ru/preview/0bbc0aaeaeac877e59b38b58ecc0d0218e967c1e5d89babc010df3eff615e540/inf/JDa_Z-tAHyZi5p7KxNdvxeKLbtQuELGpcDsq-qsR7Sc94lUfiCwcSwj_qyacx8G52fdxeY5-f2GDB-EZ90sBzA%3D%3D?uid=1409026565&filename=shape1.svg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1409026565&tknv=v2&size=1920x880);
+}
+.shape3
+{
+	position: absolute;
+width: 422px;
+height: 479.6px;
+left: 1339px;
+top: 2797px;
+background: url(https://1.downloader.disk.yandex.ru/preview/aafa6713ef71f2b375183dbc1f8de78843f1ad21f72df427207ed20b530179c7/inf/sYd46tWI_4ttuoR-JlJYm5tnyplCBKVUw0eYzuEy3GFrZf5lbSIg2waHDCRYCPWH6Mdzuh3boQrBzo_NISZnJQ%3D%3D?uid=1409026565&filename=shape4.svg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1409026565&tknv=v2&size=1920x880);
+}
+.zzz
+{
+	position: absolute;
+left: 23.7%;
+right: 37.2%;
+top: 20.02%;
+bottom: 71.85%;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 39px;
+/* identical to box height */
+
+
+color: #000000;
+}
+.zzzz
+{
+	position: absolute;
+left: 11.37%;
+right: 3.55%;
+top: 36.07%;
+bottom: 43.91%;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+color: #000000;
+}
+.xx
+{
+	position: absolute;
+left: 23.7%;
+right: 28.67%;
+top: 66.72%;
+bottom: 25.15%;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 39px;
+/* identical to box height */
+
+
+color: #000000;
+}
+.button1
+{
+text-decoration: none;
+width: 120px;
+height: 24px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+color: #000000;
+}
+.buttonmain1
+{
+	box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 12px;
+gap: 10px;
+
+position: absolute;
+left: 28.67%;
+right: 37.2%;
+top: 82.15%;
+bottom: 7.84%;
+
+border: 1px solid #000000;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 12px;
+}
+
+.ww
+{
+	position: absolute;
+left: 24.41%;
+right: 8.53%;
+top: 10.01%;
+bottom: 65.6%;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 39px;
+
+color: #000000;
+}
+.www
+{
+
+position: absolute;
+left: 16.59%;
+right: 11.61%;
+top: 41.08%;
+bottom: 40.78%;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+}
+
+.xxx
+{
+	position: absolute;
+left: 26.3%;
+right: 26.07%;
+top: 64.43%;
+bottom: 27.44%;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 39px;
+/* identical to box height */
+
+
+color: #000000;
+}
+.buttonmain2
+{
+	box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 12px;
+gap: 10px;
+
+position: absolute;
+left: 35.55%;
+right: 30.33%;
+top: 77.98%;
+bottom: 12.01%;
+
+border: 1px solid #000000;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 12px;
+}
+.button2{
+	width: 120px;
+height: 24px;
+text-decoration: none;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.ee
+{
+	position: absolute;
+left: 19.07%;
+right: 2.44%;
+top: 13.76%;
+bottom: 69.21%;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 39px;
+
+color: #000000;
+}
+.rr
+{
+	position: absolute;
+left: 12.71%;
+right: 12.47%;
+top: 40.61%;
+bottom: 48.91%;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+
+color: #000000;
+
+}
+.xxxx
+{
+	position: absolute;
+left: 19.07%;
+right: 31.78%;
+top: 58.95%;
+bottom: 32.53%;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 39px;
+/* identical to box height */
+
+
+color: #000000;
+}
+.buttonmain3
+{
+	box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 12px;
+gap: 10px;
+
+position: absolute;
+left: 28.85%;
+right: 35.94%;
+top: 75.33%;
+bottom: 14.19%;
+
+border: 1px solid #000000;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 12px;
+}
+.button3
+{
+text-decoration: none;
+width: 120px;
+height: 24px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+
+.button1:hover
+{
+	
+	color: white;
+	transition: 0.8s;
+}
+.button1:not(hover)
+{
+	transition: 0.8s;
+}
+.buttonmain1:hover
+{
+background-color: black;
+transition: 0.8s;
+}
+.buttonmain1:not(hover)
+{
+
+transition: 0.8s;
+}
+
+.button2:hover
+{
+	
+	color: white;
+	transition: 0.8s;
+}
+.button2:not(hover)
+{
+	transition: 0.8s;
+}
+.buttonmain2:hover
+{
+background-color: black;
+transition: 0.8s;
+}
+.buttonmain2:not(hover)
+{
+
+transition: 0.8s;
+}
+.button3:hover
+{
+	
+	color: white;
+	transition: 0.8s;
+}
+.button3:not(hover)
+{
+	transition: 0.8s;
+}
+.buttonmain3:hover
+{
+background-color: black;
+transition: 0.8s;
+}
+.buttonmain3:not(hover)
+{
+
+transition: 0.8s;
+}
+ 
+ 
+ </style>

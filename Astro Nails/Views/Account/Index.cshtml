@@ -1,13 +1,372 @@
 ﻿@foreach (var p in Model)
 {
-    @p.Name
-    <br />
-    @p.Surname
-    <br />
-    @p.Patronomic
-    <br />
-    @p.Phone
-    <td class="redbutton">@Html.ActionLink("Редактировать", "Edit", new { id = p.Id })</td>
-    <td class="redbutton">@Html.ActionLink("Заказы", "Entry")</td>
-    <br />
+   <div class="welcome">
+    <div class="welcome1">
+        <h2 class="privet">Привет, </h2>
+        <div class="name">
+            <div class="name1">
+               <div class="name2">  @p.Name </div>  
+                 <div class="fam">  @p.Surname </div> 
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+  
+ 
+   </div>
+
+  
+
+
+
+<div class="btng">
+ <div class="btngg">
+     <a class="buttong">На главную </a>  
+
+
+
+ </div>
+</div>
+
+
+
+<div class="mail">
+     @p.Phone
+
+</div>
+
+<div class="text">
+    Мы рады что вы с нами!
+    <br>
+Тут вы можете проверить вашу бронь.<br>
+Мы вас ждем!
+
+</div>
+
+<div class="button1"> 
+
+     <td class="buttontext">@Html.ActionLink("Редактировать", "Edit", new { id = p.Id })</td>
+</div>
+
+<div class="button2">
+     <td class="button2text">@Html.ActionLink("Заказы", "Entry")</td>
+  
+
+
+</div>
+  <div class="img">
+
+
+  </div>
 }
+
+
+
+<style>
+
+    .img
+    {
+        position: absolute;
+width: 881px;
+height: 588px;
+left: 960px;
+top: 121px;
+
+background: url(https://4.downloader.disk.yandex.ru/preview/d792bd7857acac98439b9e7a17ba76c0f31c432391e6183d94b94cde11749022/inf/_-bVLVYsoILsLHdc4HjpCdiwBbT9qhHnsgWIoqwdbqDr3uN_Vo0Z6pXLvmtvu76ZSn4uvtamTpcwU2LLQp42Hg%3D%3D?uid=1409026565&filename=5270601.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1409026565&tknv=v2&size=1920x937);
+border-radius: 56px;
+    }
+    .button2text
+    {
+        width: 152px;
+height: 29px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+    .button2
+    {
+        display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 24px 92px;
+gap: 10px;
+
+position: absolute;
+width: 336px;
+height: 77px;
+left: 505px;
+top: 391px;
+
+/* Gray 6 */
+
+background: #F2F2F2;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+    }
+    .buttontext
+    {
+        width: 191px;
+height: 58px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+    .button1
+    {
+        display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 24px 92px;
+gap: 10px;
+
+position: absolute;
+width: 336px;
+height: 77px;
+left: 91px;
+top: 391px;
+
+/* Gray 6 */
+
+background: #F2F2F2;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+    }
+    .text
+    {
+        position: absolute;
+width: 497px;
+height: 98px;
+left: 102px;
+top: 261px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+    }
+    .mail
+    {
+        display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 10px;
+gap: 10px;
+
+position: absolute;
+width: 299px;
+height: 49px;
+left: 101px;
+top: 188px;
+    }
+    .fam
+    {
+        width: 272px;
+height: 37px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+    }
+    .name2
+    {
+        width: 104px;
+height: 39px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+/* identical to box height */
+
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+    .name1
+    {
+        display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 6px;
+
+width: 382px;
+height: 39px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+    .name
+    {
+        display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 5px 0px;
+gap: 10px;
+
+width: 390px;
+height: 49px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 1;
+    }
+    .privet
+    {
+        width: 160px;
+height: 44px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+
+    .welcome1
+    {
+        display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+
+position: absolute;
+width: 558px;
+height: 58px;
+left: 0px;
+top: 0px;
+
+    }
+    .welcome
+    {
+        position: absolute;
+width: 678px;
+height: 58px;
+left: 106px;
+top: 140px;
+    }
+    .buttong
+    {
+        width: 123px;
+height: 24px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+    }
+    
+    .btng
+    {
+    position: absolute;
+width: 147px;
+height: 49px;
+left: 102px;
+top: 37px;
+
+    }
+    .btngg
+    {
+        display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 12px;
+gap: 10px;
+
+position: absolute;
+width: 147px;
+height: 48px;
+left: 0px;
+top: 0px;
+
+/* Gray 6 */
+
+background: #F2F2F2;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 12px;
+    }
+
+</style>
