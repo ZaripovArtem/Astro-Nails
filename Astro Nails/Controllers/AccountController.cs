@@ -39,8 +39,13 @@ namespace Astro_Nails.Controllers
                 if(user != null)
                 {
                     await Authenticate(user); // аутентификация
+                    if(user.RoleId == 2)
+                        return RedirectToAction("Index", "Account");
+                    if (user.RoleId == 1)
+                        return RedirectToAction("Index", "Admin");
+                    if (user.RoleId > 2)
+                        return RedirectToAction("Index", "Master");
 
-                    return RedirectToAction("Index", "Home");
                 }
             }
             

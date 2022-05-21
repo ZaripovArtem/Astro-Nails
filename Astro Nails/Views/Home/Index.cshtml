@@ -5,19 +5,29 @@
 
         <div class="mainlist">
 <div class="textone">
-    <a class="contactbutton"> Контакты</a>
 
-    <a class="uslugibutton"> Услуги </a>
+    <a class="uslugibutton" href="~/Home/Service"> Услуги </a>
 
-    <a class="onasbutton"> О нас </a>
+    <a class="onasbutton" href="~/Home/About"> О нас </a>
 </div>
 
         </div>
      
 
-     <div class="authoriz">
-<a href="" class="authorizbutton">  Авторизоваться </a>
-     </div>
+@if(User.Identity.IsAuthenticated)
+{
+<div class="authoriz">
+    
+    <a href="~/Account" class="authorizbutton">@User.Identity.Name </a>
+</div>
+}
+ else
+{
+<div class="authoriz">
+    <a href="~/Account/Login" class="authorizbutton">  Авторизоваться </a>
+</div>
+}
+     
 
 
 <div class="maintext">
@@ -29,7 +39,7 @@
 
 
 <div class="buttonzapis">
-    <a href="" class="zapisbuttonmain "> Записаться</a>
+    <a href="~/Order" class="zapisbuttonmain "> Записаться</a>
 </div>
 
 <div class="devka">  </div>
@@ -101,7 +111,7 @@
     </h1>
     <h1 class="zzzz"> Приведем в порядок ваши пальчики. Делаем аппаратный и новый пилочный маникюр.</h1>
 <h1 class="xx">От 1200 руб.</h1>
-<div class="buttonmain1"> <a href="" class="button1">Записаться</a></div>
+<div class="buttonmain1"> <a href="~/Order" class="button1">Записаться</a></div>
 
 
 </div>
@@ -112,7 +122,7 @@
     <h1 class="ww"> Маникюр с покрытием лак или гель-лак</h1>
     <h1 class="www">Подберем идеальный цвет под настроение и стиль</h1>
     <h1 class="xxx">От 1200 руб.</h1>
-    <div class="buttonmain2"> <a href="" class="button2">Записаться</a></div>
+    <div class="buttonmain2"> <a href="~/Order" class="button2">Записаться</a></div>
 
     </div>
 
@@ -120,7 +130,7 @@
     <h1 class="ee">Маникюр с уходом для рук</h1>
     <h1 class="rr">Забота о здоровье ногтей и кожи рук</h1>
       <h1 class="xxxx">От 1200 руб.</h1>
-    <div class="buttonmain3"> <a href="" class="button3">Записаться</a></div>
+    <div class="buttonmain3"> <a href="~/Order" class="button3">Записаться</a></div>
 
 
 
@@ -642,8 +652,8 @@ background: url(https://3.downloader.disk.yandex.ru/preview/0bbc0aaeaeac877e59b3
 .shape3
 {
 	position: absolute;
-width: 422px;
-height: 479.6px;
+width: 444px;
+height: 495.6px;
 left: 1339px;
 top: 2797px;
 background: url(https://1.downloader.disk.yandex.ru/preview/aafa6713ef71f2b375183dbc1f8de78843f1ad21f72df427207ed20b530179c7/inf/sYd46tWI_4ttuoR-JlJYm5tnyplCBKVUw0eYzuEy3GFrZf5lbSIg2waHDCRYCPWH6Mdzuh3boQrBzo_NISZnJQ%3D%3D?uid=1409026565&filename=shape4.svg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=1409026565&tknv=v2&size=1920x880);
