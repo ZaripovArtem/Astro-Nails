@@ -1,4 +1,5 @@
 ﻿using Astro_Nails.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -96,6 +97,11 @@ namespace Astro_Nails.Controllers
                 return RedirectToAction("Index");
             }
             return RedirectToAction("Create");
+        }
+        public IActionResult All()
+        {
+            var order = _context.Orders.Include(p => p.User).Include(d => d.Service);
+            return View(order.ToList());
         }
     }
 }

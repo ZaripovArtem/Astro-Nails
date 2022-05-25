@@ -18,7 +18,10 @@
 {
 <div class="authoriz">
     
-    <a href="~/Account" class="authorizbutton">@User.Identity.Name </a>
+    <a href="~/Account" class="authorizbutton">Профиль</a>
+    <form method="post" asp-controller="Account" asp-action="Logout">
+        <input type="submit" value="Выход" />
+    </form>
 </div>
 }
  else

@@ -47,6 +47,10 @@ namespace Astro_Nails.Controllers
                         return RedirectToAction("Index", "Master");
 
                 }
+                else
+                {
+                    ModelState.AddModelError("Password", "Неверный логин или пароль");
+                }
             }
             
             return View(model);
@@ -143,9 +147,16 @@ namespace Astro_Nails.Controllers
         [HttpPost]
         public IActionResult Edit(User user)
         {
+            IQueryable<User> user_login = _context.Users
+                .Where(u => u.Phone == User.Identity.Name);
+            foreach(var p in user_login)
+            {
+                user.RoleId = p.RoleId;
+                
+            }
+
             _context.Entry(user).State = EntityState.Modified;
             _context.SaveChanges();
-            
             return RedirectToAction("Index");
         }
 
@@ -154,7 +165,12 @@ namespace Astro_Nails.Controllers
         {
             if(User.Identity.IsAuthenticated)
             {
-                var orders = _context.Orders.Include(u => u.User);
+                var orders = _context.Orders.Include(u => u.User)
+                    .Where(u => u.ClientPhone == User.Identity.Name);
+                if(orders.Count() == 0)
+                {
+                    ViewBag.Null = "Заказов нет";
+                }
                 return View(orders.ToList());
             }
             else
@@ -172,5 +188,21 @@ namespace Astro_Nails.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult Logout()
+        {
+            HttpContext.SignOutAsync("Cookies");
+            return RedirectToAction("Login", "Account");
+        }
+
+        public IActionResult Delete(int? id)
+        {
+            var qwe = _context.Orders.Find(id);
+            if(qwe != null)
+            {
+                _context.Orders.Remove(qwe);
+                _context.SaveChanges();
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

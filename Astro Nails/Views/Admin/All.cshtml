@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Astro_Nails.Models.Order>
+
+@using (Html.BeginForm())
+{
+    foreach (var p in Model)
+    {
+        @p.DateTime_Order
+        <br />
+        @p.ClientPhone
+        <br />
+        @Html.DisplayFor(modelItem => p.User.Name)
+        <br />
+        @Html.DisplayFor(modelItem => p.User.Surname)
+        @Html.DisplayFor(modelItem => p.User.Patronomic)
+        @Html.DisplayFor(modelItem => p.Service.Name)
+    }
+}

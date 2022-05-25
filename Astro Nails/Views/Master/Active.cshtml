@@ -1,18 +1,24 @@
 ﻿@using (Html.BeginForm())
 {
-    <td>@Html.ActionLink("Добавить мастера", "Create")</td>
-    <a href="~/Service">Просмотр услуг</a>
-    <a href="~/Master">Просмотр заказов</a>
 
+    <div class="mainn">
+        <div class="asd">
+            <h2 class="text">
+                Привет
+            </h2>
+            <h2 class="text2">Вот твои активные заказы:</h2>
 
+        </div>
+
+    </div>
     <table class="table">
         <thead>
             <tr>
                 <th>Фамилия</th>
                 <th>Имя</th>
                 <th>Отчество</th>
-                <th>Редактировать</th>
-                <th>Удалить</th>
+                <th>Дата</th>
+
 
             </tr>
 
@@ -20,27 +26,29 @@
         </thead>
         @foreach (var p in Model)
         {
+
             <tbody>
 
 
                 <tr>
-                    <td>@p.Name</td>
                     <td>@p.Surname</td>
+                    <td>@p.Name</td>
+
                     <td>@p.Patronomic</td>
 
                     <td>
-                        @Html.ActionLink("Редактировать", "Edit", new { id = p.Id })
-
-                </td>
-                <td> 	@Html.ActionLink("Удалить", "Delete", new { id = p.Id })</td>
+                        @p.DateTime_Order
+                    </td>
 
 
-            </tr>
 
-        </tbody>
-    }
+                </tr>
+
+            </tbody>
+        }
     </table>
 }
+
 <style>
     .table {
         width: 100%;

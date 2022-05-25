@@ -1,4 +1,5 @@
 ﻿using Astro_Nails.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -25,6 +26,26 @@ namespace Astro_Nails.Controllers
                 {
                     IQueryable<Order> master_order = _context.Orders
                     .Where(o => o.UserId == p.Id);
+                    return View(master_order);
+                }
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
+        }
+        public ActionResult Active()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                IQueryable<User> this_user = _context.Users
+                .Where(u => u.Phone == User.Identity.Name);
+                foreach (var p in this_user)
+                {
+                    IQueryable<Order> master_order = _context.Orders
+                    .Where(o => o.UserId == p.Id)
+                    .Where(p => p.DateTime_Order > DateTime.Now);
                     return View(master_order);
                 }
                 return RedirectToAction("Index");
