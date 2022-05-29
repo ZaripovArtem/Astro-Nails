@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Astro_Nails.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         private ApplicationContext _context;
