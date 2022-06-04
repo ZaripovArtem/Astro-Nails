@@ -63,12 +63,26 @@ namespace Astro_Nails.Controllers
 
         public IActionResult Delete(int? id)
         {
-            if (id != null)
+
+            var user = _context.Users.Find(id);
+
+            if(user != null)
             {
-                var user = _context.Users.Find(id);
+                IQueryable<Order> orders = _context.Orders.Where(u => u.UserId == user.Id);
+                if (orders != null)
+                {
+                    foreach (var o in orders)
+                    {
+                        Order order = _context.Orders.Find(o.Id);
+                        order.UserId = 777;
+                        _context.Entry(order).State = EntityState.Modified;
+                    }
+                }
+
                 _context.Users.Remove(user);
                 _context.SaveChanges();
             }
+
             return RedirectToAction("Index");
         }
 

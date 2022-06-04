@@ -29,12 +29,13 @@ namespace Astro_Nails.Models
             Role MasterRole = new Role { Id = 3, Name = "Master" };
             Role TopMasterRole = new Role { Id = 4, Name = "Top Master" };
 
+            User Service = new User { Id = 777 }; // чек
             User Admin = new User { Id = 1, Phone = "admin@mail.ru", Name = "Аделя", Surname = "Хамидуллина", Patronomic = "qe", Password = "12345", RoleId = 1 };
             User User = new User { Id = 2, Phone = "user@mail.ru", Name = "Аделя", Surname = "Хамидуллина", Patronomic="qe", Password = "qweasd", RoleId = 2 };
             User Master = new User { Id = 3, Phone = "master@mail.ru", Name = "Имя", Surname = "Фамилия", Patronomic = "Отчество", Password = "qweasd", RoleId = 3 };
 
             modelBuilder.Entity<Role>().HasData(new Role[] { AdminRole, UserRole, MasterRole });
-            modelBuilder.Entity<User>().HasData(new User[] { Admin, User, Master });
+            modelBuilder.Entity<User>().HasData(new User[] { Admin, User, Master, Service });
             modelBuilder.Entity<Service>().HasData(new Service[] { s1, s2 });
             base.OnModelCreating(modelBuilder);
         }

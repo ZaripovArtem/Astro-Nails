@@ -25,7 +25,7 @@ namespace Astro_Nails
 
         public void ConfigureServices(IServiceCollection services)
         {
-            string connection = "Server=(localdb)\\mssqllocaldb;Database=astrotest10;Trusted_Connection=True;";
+            string connection = "Server=(localdb)\\mssqllocaldb;Database=astrodatabase;Trusted_Connection=True;";
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connection));
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
