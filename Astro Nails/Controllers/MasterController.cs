@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace Astro_Nails.Controllers
 {
-    [Authorize(Roles = "Master")]
     public class MasterController : Controller
     {
         private ApplicationContext _context;

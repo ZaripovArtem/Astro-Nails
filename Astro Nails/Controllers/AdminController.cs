@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 
 namespace Astro_Nails.Controllers
 {
-    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         private ApplicationContext _context;
@@ -71,6 +70,18 @@ namespace Astro_Nails.Controllers
                 _context.SaveChanges();
             }
             return RedirectToAction("Index");
+        }
+
+        public IActionResult DeleteAll(int? id)
+        {
+            Order order = _context.Orders.Find(id);
+            if(order != null)
+            {
+                order.Service_State = "Отклонено";
+                _context.Entry(order).State = EntityState.Modified;
+                _context.SaveChanges();
+            }
+            return RedirectToAction("All");
         }
 
         [HttpGet]
